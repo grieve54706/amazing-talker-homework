@@ -4,13 +4,13 @@
       v-on:next-week-schedule="onNextWeekSchedule" 
       v-on:last-week-schedule="onLastWeekSchedule" 
     />
-    <div>{{ testData }}</div>
+    <!-- <div>{{ testData }}</div> -->
   </div>
 </template>
 
 <script>
 import Schedule from "./components/Schedule.vue"
-import gql from 'graphql-tag'
+// import gql from 'graphql-tag'
 
 var dummy_json = `{
   "available": [
@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       scheduleDatas: {},
-      testData: {}
+      // testData: {}
     };
   },
   created: function () {
@@ -112,13 +112,14 @@ export default {
         });
     }
   },
-  apollo: {
-    testData: gql`
-      query {
-        schedule
-      }
-    `,
-  },
+  // Unknown problem when use cache
+  // apollo: {
+  //   testData: gql`
+  //     query {
+  //       schedule
+  //     }
+  //   `,
+  // },
 };
 
 </script>

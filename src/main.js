@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ApolloClient from 'apollo-boost'
-import InMemoryCache from 'apollo-cache-inmemory'
+// import InMemoryCache from 'apollo-cache-inmemory'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueApollo from 'vue-apollo'
@@ -41,7 +41,10 @@ const i18n = new VueI18n({
   messages
 })
 
-const cache = new InMemoryCache()
+// Unknown problem:
+// Uncaught TypeError: apollo_cache_inmemory__WEBPACK_IMPORTED_MODULE_3__.default is not a constructor
+
+// const cache = new InMemoryCache()
 
 export const typeDefs = gql`
   type Item {
@@ -52,23 +55,23 @@ export const typeDefs = gql`
 `;
  
 const apolloClient = new ApolloClient({
-  cache,
+  // cache,
   typeDefs,
   resolvers: {},
 })
 
-cache.writeData({
-  data: {
-    schedule: [
-      {
-        __typename: 'Item',
-        id: 'dqdBHJGgjgjg',
-        text: 'test',
-        done: true,
-      },
-    ],
-  },
-})
+// cache.writeData({
+//   data: {
+//     schedule: [
+//       {
+//         __typename: 'Item',
+//         id: 'dqdBHJGgjgjg',
+//         text: 'test',
+//         done: true,
+//       },
+//     ],
+//   },
+// })
 
 const apolloProvider = new VueApollo({
   defaultClient: apolloClient,
