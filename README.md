@@ -1,6 +1,6 @@
 # amazing-talker-homework
 
-Add some comment for my question when develop.
+Add some comment for my question when develop.  
 And some code is commented, cuz I want to try graphQL but not enough time.
 
 ## Project setup
