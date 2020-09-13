@@ -44,7 +44,7 @@
                       v-bind:class="{ active: data.hasAvailable }"
                     >
                       <div class="title-box">
-                        <div class="at-text-center">{{ data.weekday }}</div>
+                        <div class="at-text-center">{{ $t('message.weekday.' + data.weekday) }}</div>
                         <div class="at-text-center">{{ data.day }}</div>
                       </div>
                       <div class="time-box">
@@ -152,7 +152,7 @@ function buildScheduleData(date, status) {
 
 function formatTime(date) {
   return date.toLocaleString(
-    {},
+    "en-US",
     {
       year: "numeric",
       month: "2-digit",
@@ -171,7 +171,7 @@ function groupByWeekday(datas, firstDayAtWeek, lastDayAtWeek) {
   for (let i = 0; i < 7; i++) {
     const dayAtWeek = new Date(firstDayAtWeek.getTime());
     dayAtWeek.setDate(dayAtWeek.getDate() + i);
-    const weekday = dayAtWeek.toLocaleString({}, { weekday: "short" });
+    const weekday = dayAtWeek.toLocaleString("en-US", { weekday: "short" });
     group[weekday] = {
       weekday: weekday,
       day: format(dayAtWeek, "dd"),

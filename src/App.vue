@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LocalChanger></LocalChanger>
     <Schedule :datas="scheduleDatas" 
       v-on:next-week-schedule="onNextWeekSchedule" 
       v-on:last-week-schedule="onLastWeekSchedule" 
@@ -10,6 +11,7 @@
 
 <script>
 import Schedule from "./components/Schedule.vue"
+import LocalChanger from "./components/LocalChanger.vue"
 // import gql from 'graphql-tag'
 
 var dummy_json = `{
@@ -51,6 +53,7 @@ export default {
   name: "App",
   components: {
     Schedule,
+    LocalChanger
   },
   data() {
     return {

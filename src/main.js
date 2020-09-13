@@ -22,6 +22,15 @@ const messages = {
         // timezone is downloaded with https://th.amazingtalker.com/teachers-and-tutors/amy-estrada, then mapping zone and show value
         // 'time-zone-description': '* 時間以 {0} 顯示'
         'time-zone-description': '* 時間以 台北 (GMT+08:00) 顯示'
+      },
+      weekday: {
+        Mon: '一',
+        Tue: '二',
+        Wed: '三',
+        Thu: '四',
+        Fri: '五',
+        Sat: '六',
+        Sun: '日'
       }
     }
   },
@@ -31,6 +40,15 @@ const messages = {
         title: 'Available times',
         // 'time-zone-description': '* All the timings listed are in your timezone: {0}' 
         'time-zone-description': '* All the timings listed are in your timezone: Taipei (GMT+08:00)' 
+      },
+      weekday: {
+        Mon: 'Mon',
+        Tue: 'Tue',
+        Wed: 'Wed',
+        Thu: 'Thu',
+        Fri: 'Fri',
+        Sat: 'Sat',
+        Sun: 'Sun'
       }
     }
   }
